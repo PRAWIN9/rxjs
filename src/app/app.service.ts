@@ -20,7 +20,7 @@ export class Appservice {
     this.behobj = this.behSub.asObservable();
 
      this.repSub = new ReplaySubject<number>(2);
-    this.repobj = this.behSub.asObservable();
+    this.repobj = this.repSub.asObservable();
   }
 
   
