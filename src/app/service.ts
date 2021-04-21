@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import { Subject, Observable} from 'rxjs'
 @Injectable()
 export class Appservice{
-  sub = Subject<any>
-  obj= Observable<number>
+  sub : Subject<number>
+  obj: Observable<number>
 
   constructor(){
     this.sub= new Subject<number>()
