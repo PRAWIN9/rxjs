@@ -7,7 +7,7 @@ import { Appservice } from "./app.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  name = "Angular " + VERSION.major;
+
   fromsub = null;
   constructor(private ser: Appservice) {
     this.ser.sub.subscribe(x => {
