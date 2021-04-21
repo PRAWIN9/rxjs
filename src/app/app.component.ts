@@ -30,6 +30,11 @@ export class AppComponent {
       this.fromsub = x;
     });
 
+     this.ser.repobj.subscribe(x => {
+      console.log("from app rep obj ", x);
+      this.fromsub = x;
+    });
+
 
   }
 }
