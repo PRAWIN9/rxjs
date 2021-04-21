@@ -14,5 +14,11 @@ export class AppComponent {
       console.log("from app sub ", x);
       this.fromsub = x;
     });
+    this.ser.sub.next("Praveen");
+
+    this.ser.obj.subscribe(x => {
+      console.log("from app obj ", x);
+      this.fromsub = x;
+    });
   }
 }
