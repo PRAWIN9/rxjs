@@ -22,5 +22,12 @@ export class AppComponent {
       console.log("from app obj ", x);
       this.fromsub = x;
     });
+
+    this.ser.behobj.subscribe(x => {
+      console.log("from app beh obs ", x);
+      this.fromsub = x;
+    });
+
+
   }
 }

@@ -21,12 +21,13 @@ export class HelloComponent {
       console.log("from hello sub ", x);
     });
 
-      this.ser.obj.subscribe(x => {
+    this.ser.obj.subscribe(x => {
       console.log("from hello obj ", x);
     });
   }
 
   emit() {
     this.ser.sendData(Math.random());
+    this.ser.sendBehData(Math.random());
   }
 }
