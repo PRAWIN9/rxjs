@@ -37,7 +37,8 @@ export class HelloComponent {
   }
 
   emit() {
-    this.ser.sendData(Math.random());
+    const random = 2
+    this.ser.sendData(random);
     this.ser.sendBehData(Math.random());
     this.ser.sendRepData(Math.random());
 
