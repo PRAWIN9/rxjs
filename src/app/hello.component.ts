@@ -30,10 +30,6 @@ export class HelloComponent {
       // this.fromsub = x;
     });
 
-
-
-
-
   }
 
   emit() {
