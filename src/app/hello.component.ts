@@ -25,10 +25,6 @@ export class HelloComponent {
       console.log("from hello obj ", x);
     });
 
-      this.ser.behobj.subscribe(x => {
-      console.log("from app beh obs ", x);
-      // this.fromsub = x;
-    });
 
   }
 
