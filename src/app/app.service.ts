@@ -2,10 +2,10 @@ import { Injectable } from "@angular/core";
 import { Subject, Observable, BehaviorSubject } from "rxjs";
 @Injectable()
 export class Appservice {
-  sub: Subject<number>;
+  private sub: Subject<number>;
   obj: Observable<number>;
 
-  private behSub: BehaviorSubject<number>;
+ private behSub: BehaviorSubject<number>;
   behobj: Observable<number>;
 
   constructor() {

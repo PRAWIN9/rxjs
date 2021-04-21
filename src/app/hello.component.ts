@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { interval } from "rxjs";
 import { Appservice } from "./app.service";
 
 @Component({
@@ -18,13 +19,18 @@ export class HelloComponent {
   @Input() name: string;
   isData= false;
   constructor(private ser: Appservice) {
-    this.ser.sub.subscribe(x => {
-      console.log("from hello sub ", x);
-    });
+    // this.ser.sub.subscribe(x => {
+    //   console.log("from hello sub ", x);
+    // });
 
     this.ser.obj.subscribe(x => {
-      console.log("from hello obj ", x);
+      console.log("from hello sub obj ", x);
     });
+
+    // this.ser.behobj.subscribe(x => {
+    //   console.log("from hello beh obs ", x);
+    
+    // });
 
 
   }
@@ -36,7 +42,7 @@ export class HelloComponent {
     if(!this.isData){
       this.isData=true;
       this.ser.behobj.subscribe(x => {
-      console.log("from app beh obs ", x);
+      console.log("from hello beh obj ", x);  //it will retain the value from hello obj
     });
     }
   }
